@@ -1,0 +1,382 @@
+From acca14ff887ff2c4707b6fd0b467f11df5f04dbd Mon Sep 17 00:00:00 2001
+From: Kristieyyy410 <biuyyy0410@163.com>
+Date: Mon, 29 Jun 2026 19:05:45 +0800
+Subject: [PATCH] Refine portfolio layout per vibe coding 9
+
+---
+ content.js |  22 +++++++--
+ index.html |  13 +++---
+ styles.css | 128 ++++++++++++++++++++++++++++++++++++++++++-----------
+ 3 files changed, 127 insertions(+), 36 deletions(-)
+
+diff --git a/content.js b/content.js
+index 9e8a9fe..5fb5a04 100644
+--- a/content.js
++++ b/content.js
+@@ -44,6 +44,8 @@ window.PORTFOLIO_CONTENT = {
+       meituanTitle: "Vertical Product Operations",
+       meituan:
+         "Led photography category growth, creator operations, and S-level city culture campaigns from 0 to 1.",
++      meituanBack:
++        "Skills: Content strategy, creator operations, project management and data analysis. Led the Photography & Museum vertical from 0-1 and planned S-level campaigns including Lu Xun's Circle of Friends and Museum Ranking with tourism boards and partners. Increased daily readership by 275%, grew active creators by 1177%, and generated millions of impressions through large-scale UGC campaigns.",
+       meituanPoint1: "Built photography category operations from 0 to 1 and grew daily reads 275%.",
+       meituanPoint2: "Activated 100+ creators and lifted high-quality active creators from 45 to 575.",
+       meituanPoint3: "Led S-level offline campaigns including Lu Xun's Circle of Friends and Public Museum Rankings.",
+@@ -51,6 +53,8 @@ window.PORTFOLIO_CONTENT = {
+       xhsTitle: "Content & User Operations Intern",
+       xhs:
+         "Supported large-scale campaigns, creator education, template activations, and community playbooks.",
++      xhsBack:
++        "Skills: Campaign planning, content operations and community management. Supported flagship campaigns including My Annual Summary, Vlog My Month and 2021 Vlogmas while launching seasonal video templates. Worked with 100+ creators, achieved 6.7M+ views, increased community contributions by 340%, and incubated 150+ core creators.",
+       xhsPoint1: "Supported My Annual Summary 2021, Vlog My Month, and 2021 Vlogmas campaigns.",
+       xhsPoint2: "Coordinated 100+ creators for music diary templates and generated 6.7M+ views.",
+       xhsPoint3: "Built creator education playbooks and increased community posting users 340%.",
+@@ -58,6 +62,8 @@ window.PORTFOLIO_CONTENT = {
+       ogilvyTitle: "Strategy Consulting Intern",
+       ogilvy:
+         "Built strategy foundations through customer journey mapping, keyword research, and social campaign planning.",
++      ogilvyBack:
++        "Skills: Brand strategy, market research and digital marketing. Supported a technology client's PR strategy through customer journey analysis, SEO research and integrated social media planning. Successfully implemented the campaign, increasing engagement on Weibo and Bilibili by 50% within three weeks while strengthening strategic consulting capabilities.",
+       ogilvyPoint1: "Designed social media campaign strategy for a technology client.",
+       ogilvyPoint2: "Mapped customer journeys and supported Baidu SEO keyword research.",
+       ogilvyPoint3: "Supported campaign execution that increased social engagement by 50% in three weeks.",
+@@ -185,10 +191,11 @@ window.PORTFOLIO_CONTENT = {
+         body: "Travel and horse riding keep me curious about the world and make me more eager to document real experiences.",
+       },
+     },
+-      contact: {
+-        eyebrow: "Contact",
++    contact: {
++      eyebrow: "Contact",
+       title: "Get in <em>touch.</em>",
+       body: "You can use this portfolio as my bilingual intro page, project deck, and personal brand site.",
++      statement: "If you’re hiring for AI growth, content operations, or community-led products, let’s talk.",
+       emailLabel: "Email",
+       xhsLabel: "Xiaohongshu",
+       linkedinLabel: "LinkedIn",
+@@ -253,6 +260,8 @@ window.PORTFOLIO_CONTENT = {
+       meituanTitle: "垂直品类产品运营",
+       meituan:
+         "从 0-1 推动摄影垂类增长、创作者运营和 S 级城市文化项目。",
++      meituanBack:
++        "能力：内容运营、创作者运营、数据分析、项目管理。负责摄影及文博垂类 0-1 生态建设，策划「鲁迅朋友圈」「大众文博榜」等 S 级项目，联动品牌、文旅局及行业机构。成果：类目阅读增长 275%，优质作者增长 1177%，累计产出数千篇 UGC，带来千万级曝光。",
+       meituanPoint1: "搭建摄影垂类从 0-1 的内容运营策略，推动类目日均阅读增长 275%。",
+       meituanPoint2: "通过 1v1 建联与社群精细化运营拉新 100+ 摄影作者，高质量月活作者从 45 增至 575。",
+       meituanPoint3: "策划执行鲁迅朋友圈、大众文博榜等 S 级线上线下活动，形成内容与城市影响力增长。",
+@@ -260,6 +269,8 @@ window.PORTFOLIO_CONTENT = {
+       xhsTitle: "内容与用户运营实习生",
+       xhs:
+         "参与大型站内活动、创作者教育、模板玩法和社群运营方法建设。",
++      xhsBack:
++        "能力：活动策划、内容运营、社群运营。参与《我的年度盘点》《Vlog My Month》《2021 Vlogmas》等官方活动，策划节日视频模板及创作者激励。成果：合作 100+ 创作者，模板播放 670 万+，社群发稿增长 340%，孵化核心作者 150+。",
+       xhsPoint1: "参与我的年度盘点 2021、Vlog My Month、2021 Vlogmas 等站内活动。",
+       xhsPoint2: "联动 100+ 头部 Vlog 博主打造音乐日记模板，带来 670w+ 播放。",
+       xhsPoint3: "通过爆款笔记创作 playbook 提升社群发稿人数 340%，孵化 150+ 核心作者。",
+@@ -267,6 +278,8 @@ window.PORTFOLIO_CONTENT = {
+       ogilvyTitle: "策略咨询实习生",
+       ogilvy:
+         "通过用户旅程、关键词研究和社媒传播方案训练策略思维。",
++      ogilvyBack:
++        "能力：品牌策略、市场研究、数字营销。参与科技企业品牌传播策略制定，结合用户旅程分析、SEO 关键词研究及社交媒体方案设计，为客户输出整合传播策略。成果：项目上线 3 周内帮助客户微博、B站等社媒互动率提升 50%，积累品牌咨询与策略分析经验。",
+       ogilvyPoint1: "为科技客户协助设计社交媒体传播策略。",
+       ogilvyPoint2: "参与用户旅程梳理，并基于百度 SEO 服务进行关键词研究。",
+       ogilvyPoint3: "协助落地传播方案，推动社交媒体互动在 3 周内提升 50%。",
+@@ -394,10 +407,11 @@ window.PORTFOLIO_CONTENT = {
+         body: "旅行和骑马让我保持对世界的好奇，也让我更愿意记录真实体验。",
+       },
+     },
+-      contact: {
+-        eyebrow: "联系我",
++    contact: {
++      eyebrow: "联系我",
+       title: "Get in <em>touch.</em>",
+       body: "你可以把这份作品集当成我的双语介绍页、项目集和个人品牌主页。",
++      statement: "如果你在寻找一位懂 AI 增长、内容运营和社区打法的人，欢迎联系我。",
+       emailLabel: "邮箱",
+       xhsLabel: "小红书",
+       linkedinLabel: "领英",
+diff --git a/index.html b/index.html
+index 5888a32..da15f45 100644
+--- a/index.html
++++ b/index.html
+@@ -156,7 +156,7 @@
+                 <div class="experience-face experience-back">
+                   <span class="company-logo ogilvy">O</span>
+                   <h3 data-i18n="experience.ogilvyTitle">Strategy Consulting Intern</h3>
+-                  <p data-i18n="experience.ogilvy">Built strategy foundations through customer journey mapping, keyword research, and social campaign planning.</p>
++                  <p data-i18n="experience.ogilvyBack">Built strategy foundations through customer journey mapping, keyword research, and social campaign planning.</p>
+                 </div>
+               </div>
+             </article>
+@@ -173,7 +173,7 @@
+                 <div class="experience-face experience-back">
+                   <span class="company-logo xhs">X</span>
+                   <h3 data-i18n="experience.xhsTitle">Content & User Operations Intern</h3>
+-                  <p data-i18n="experience.xhs">Supported large-scale campaigns, creator education, template activations, and community playbooks.</p>
++                  <p data-i18n="experience.xhsBack">Supported large-scale campaigns, creator education, template activations, and community playbooks.</p>
+                 </div>
+               </div>
+             </article>
+@@ -190,7 +190,7 @@
+                 <div class="experience-face experience-back">
+                   <span class="company-logo meituan">M</span>
+                   <h3 data-i18n="experience.meituanTitle">Vertical Product Operations</h3>
+-                  <p data-i18n="experience.meituan">Led photography category growth, creator operations, and S-level city culture campaigns from 0 to 1.</p>
++                  <p data-i18n="experience.meituanBack">Led photography category growth, creator operations, and S-level city culture campaigns from 0 to 1.</p>
+                 </div>
+               </div>
+             </article>
+@@ -414,10 +414,13 @@
+           </div>
+         </section>
+ 
+-        <section class="section contact" id="contact">
+-          <div class="section-heading contact-heading">
++        <section class="section contact contact-full" id="contact">
++          <div class="contact-editorial">
+             <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+             <h2 data-i18n-html="contact.title">Get in <em>touch.</em></h2>
++            <p class="contact-statement" data-i18n="contact.statement">
++              If you’re hiring for AI growth, content operations, or community-led products, let’s talk.
++            </p>
+           </div>
+           <div class="contact-grid">
+             <a class="contact-card contact-card-email" href="mailto:biuyyy0410@163.com">
+diff --git a/styles.css b/styles.css
+index 75724ec..5ebe0ef 100644
+--- a/styles.css
++++ b/styles.css
+@@ -764,7 +764,7 @@ a {
+ }
+ 
+ .experience-flip-card {
+-  min-height: 520px;
++  min-height: 560px;
+   perspective: 1400px;
+   scroll-snap-align: start;
+   outline: 0;
+@@ -774,7 +774,7 @@ a {
+   position: relative;
+   width: 100%;
+   height: 100%;
+-  min-height: 520px;
++  min-height: 560px;
+   transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+   transform-style: preserve-3d;
+ }
+@@ -831,21 +831,23 @@ a {
+ 
+ .experience-back {
+   display: grid;
+-  align-content: center;
+-  gap: 18px;
+-  padding: 30px;
++  align-content: start;
++  gap: 16px;
++  padding: 28px;
++  overflow-y: auto;
+   transform: rotateY(180deg);
+ }
+ 
+ .experience-back h3 {
+   margin: 0;
+-  font-size: 1.55rem;
++  font-size: 1.45rem;
+ }
+ 
+ .experience-back p {
+   margin: 0;
+   color: var(--muted);
+-  font-size: 1rem;
++  font-size: 0.94rem;
++  line-height: 1.82;
+ }
+ 
+ .case-card {
+@@ -1002,6 +1004,12 @@ a {
+   border-radius: var(--radius-md);
+ }
+ 
++.workflow-card:nth-child(3) {
++  gap: 18px;
++  border-color: rgba(21, 20, 18, 0.3);
++  background: rgba(251, 250, 246, 0.92);
++}
++
+ .prompt-box {
+   margin-top: 18px;
+   padding: 22px 24px;
+@@ -1016,6 +1024,15 @@ a {
+   box-shadow: none;
+ }
+ 
++.workflow-card:nth-child(3) .prompt-inline,
++.workflow-card:nth-child(3) .compact-flow,
++.workflow-card:nth-child(3) .prompt-output {
++  border-radius: 0;
++  border-color: rgba(21, 20, 18, 0.34);
++  background: rgba(255, 255, 255, 0.58);
++  box-shadow: none;
++}
++
+ .prompt-header {
+   display: flex;
+   justify-content: space-between;
+@@ -1235,27 +1252,58 @@ a {
+   line-height: 1.7;
+ }
+ 
+-.contact-grid {
++.contact-full {
++  min-height: calc(100vh - 90px);
+   display: grid;
+-  grid-template-columns: repeat(4, minmax(0, 1fr));
+-  gap: 16px;
++  align-content: center;
++  gap: 34px;
++  padding-top: 96px;
++  padding-bottom: 96px;
++}
++
++.contact-editorial {
++  display: grid;
++  grid-template-columns: minmax(120px, 0.42fr) minmax(0, 1.58fr);
++  gap: 34px;
++  align-items: start;
+ }
+ 
+-.contact-heading {
+-  text-align: center;
++.contact-editorial .eyebrow {
++  margin-top: 18px;
+ }
+ 
+-.contact-heading h2 {
+-  margin-inline: auto;
++.contact-editorial h2 {
++  max-width: 8.4em;
++  margin: 0;
+   font-family: "Cormorant Garamond", serif;
+-  font-size: 7rem;
+-  line-height: 0.88;
++  font-size: clamp(5.2rem, 11vw, 10.8rem);
++  line-height: 0.82;
+   font-weight: 500;
++  letter-spacing: -0.08em;
+ }
+ 
+-.contact-heading em {
++.contact-editorial h2 em {
+   color: var(--accent-2);
+   font-style: italic;
++  letter-spacing: -0.06em;
++}
++
++.contact-statement {
++  max-width: 860px;
++  margin: 2px 0 0;
++  padding: 22px 0 0;
++  border-top: 1px solid rgba(21, 20, 18, 0.28);
++  color: var(--text);
++  font-family: "Cormorant Garamond", serif;
++  font-size: clamp(2.05rem, 4.6vw, 4.45rem);
++  line-height: 0.98;
++  letter-spacing: -0.045em;
++}
++
++.contact-grid {
++  display: grid;
++  grid-template-columns: repeat(4, minmax(0, 1fr));
++  gap: 14px;
+ }
+ 
+ .contact-card {
+@@ -1265,18 +1313,19 @@ a {
+   align-content: center;
+   justify-items: center;
+   gap: 10px;
+-  min-height: 132px;
+-  padding: 22px 22px 20px;
+-  border-radius: var(--radius-md);
+-  border: 1px solid var(--line);
+-  background: var(--card);
+-  box-shadow: var(--shadow);
++  min-height: 118px;
++  padding: 22px 18px 18px;
++  border-radius: 0;
++  border: 1px solid rgba(21, 20, 18, 0.18);
++  background: rgba(251, 250, 246, 0.78);
++  box-shadow: none;
+   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+ }
+ 
+ .contact-card:hover {
+   transform: translateY(-2px);
+-  box-shadow: 0 24px 52px rgba(33, 23, 13, 0.08);
++  border-color: rgba(21, 20, 18, 0.42);
++  box-shadow: 0 18px 46px rgba(33, 23, 13, 0.07);
+ }
+ 
+ .contact-kicker {
+@@ -1287,8 +1336,8 @@ a {
+ }
+ 
+ .contact-label {
+-  color: var(--muted);
+-  font-size: 0.92rem;
++  color: var(--text);
++  font-size: 0.86rem;
+   font-weight: 700;
+   letter-spacing: 0.12em;
+   text-transform: uppercase;
+@@ -1303,7 +1352,7 @@ a {
+ .contact-hover {
+   margin-top: auto;
+   color: var(--accent-2);
+-  font-size: 0.82rem;
++  font-size: 0.76rem;
+   font-weight: 700;
+   letter-spacing: 0.04em;
+   opacity: 0;
+@@ -1342,6 +1391,15 @@ a {
+     grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+ 
++  .contact-editorial {
++    grid-template-columns: 1fr;
++    gap: 18px;
++  }
++
++  .contact-editorial .eyebrow {
++    margin-top: 0;
++  }
++
+   .hero {
+     min-height: auto;
+   }
+@@ -1485,6 +1543,22 @@ a {
+     font-size: 4.2rem;
+   }
+ 
++  .contact-full {
++    min-height: auto;
++    padding-top: 64px;
++    padding-bottom: 64px;
++  }
++
++  .contact-editorial h2 {
++    font-size: clamp(4.4rem, 24vw, 6.4rem);
++    letter-spacing: -0.07em;
++  }
++
++  .contact-statement {
++    font-size: clamp(2.1rem, 12vw, 3.2rem);
++    line-height: 1;
++  }
++
+   .project-meta,
+   .prompt-header,
+   .case-topline,
+-- 
+2.39.2 (Apple Git-143)
+

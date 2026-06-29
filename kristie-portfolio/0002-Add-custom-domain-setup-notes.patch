@@ -1,0 +1,56 @@
+From 0c753364d279bb3817f4b546ccaacf374b42c06b Mon Sep 17 00:00:00 2001
+From: Kristieyyy410 <biuyyy0410@163.com>
+Date: Tue, 30 Jun 2026 00:16:21 +0800
+Subject: [PATCH 2/2] Add custom domain setup notes
+
+---
+ DOMAIN_SETUP.md | 37 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 37 insertions(+)
+ create mode 100644 DOMAIN_SETUP.md
+
+diff --git a/DOMAIN_SETUP.md b/DOMAIN_SETUP.md
+new file mode 100644
+index 0000000..d65284c
+--- /dev/null
++++ b/DOMAIN_SETUP.md
+@@ -0,0 +1,37 @@
++# Domain setup for kristiezheng.site
++
++Current site files are ready for a GitHub Pages custom domain:
++
++- `CNAME` contains `kristiezheng.site`
++- The site should be deployed from the GitHub repository root or Pages publishing source root.
++
++## GitHub Pages
++
++1. Open the repository `Kristieyyy410/Kristie-portfolio`.
++2. Go to `Settings` -> `Pages`.
++3. Set the custom domain to `kristiezheng.site`.
++4. Save and wait for DNS verification.
++5. Enable `Enforce HTTPS` after GitHub marks the domain as ready.
++
++## Namecheap DNS
++
++In Namecheap, open `Domain List` -> `kristiezheng.site` -> `Advanced DNS`.
++
++For the apex domain, add these `A Record` entries:
++
++```text
++Host: @    Value: 185.199.108.153
++Host: @    Value: 185.199.109.153
++Host: @    Value: 185.199.110.153
++Host: @    Value: 185.199.111.153
++```
++
++For the `www` subdomain, add:
++
++```text
++Type: CNAME Record
++Host: www
++Value: Kristieyyy410.github.io
++```
++
++DNS may take a few minutes to 24 hours to propagate.
+-- 
+2.39.2 (Apple Git-143)
+
