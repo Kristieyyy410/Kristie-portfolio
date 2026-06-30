@@ -1079,17 +1079,18 @@ a {
   text-transform: uppercase;
 }
 
-.blog-body a {
-  display: inline-flex;
-  margin-top: 6px;
-  color: var(--accent-2);
-  font-size: 0.84rem;
-  font-weight: 700;
-}
-
 .blog-card h3 {
   font-size: clamp(1.18rem, 1.8vw, 1.55rem);
   line-height: 1.15;
+}
+
+.blog-card h3 a {
+  color: #9b5f2d;
+  transition: color 160ms ease;
+}
+
+.blog-card h3 a:hover {
+  color: #c07839;
 }
 
 .stat-strip {
@@ -1402,21 +1403,22 @@ a {
 
 .contact-editorial {
   display: grid;
-  grid-template-columns: minmax(120px, 0.42fr) minmax(0, 1.58fr);
-  gap: 34px;
-  align-items: start;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
 }
 
 .contact-editorial .eyebrow {
-  margin-top: 18px;
+  margin: 0;
 }
 
 .contact-editorial h2 {
-  max-width: 8.4em;
-  margin: 0;
+  max-width: 100%;
+  margin: 0 auto;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(5.2rem, 11vw, 10.8rem);
-  line-height: 0.82;
+  font-size: clamp(5.2rem, 10vw, 9.2rem);
+  line-height: 0.86;
   font-weight: 500;
   letter-spacing: -0.08em;
 }
@@ -1428,15 +1430,15 @@ a {
 }
 
 .contact-statement {
-  max-width: 860px;
-  margin: 2px 0 0;
-  padding: 22px 0 0;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px 0 0;
   border-top: 1px solid rgba(21, 20, 18, 0.28);
   color: var(--text);
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.05rem, 4.6vw, 4.45rem);
-  line-height: 0.98;
-  letter-spacing: -0.045em;
+  font-size: clamp(1.8rem, 3.2vw, 3rem);
+  line-height: 1.14;
+  letter-spacing: -0.025em;
 }
 
 .contact-grid {
