@@ -43,15 +43,30 @@ window.PORTFOLIO_CONTENT = {
       meituanCompany: "Meituan / Dianping",
       meituanTitle: "Vertical Product Operations",
       meituan:
-        "From zero to one, I built content strategy, creator acquisition, campaign operations, and community mechanics that lifted category growth.",
-      xhsCompany: "Red",
+        "Led photography category growth, creator operations, and S-level city culture campaigns from 0 to 1.",
+      meituanBack:
+        "Built the <strong>Photography and Museum content ecosystem from 0-1</strong>, leading creator acquisition, community activation and S-level campaign execution; leveraged <strong>data analysis and cross-functional collaboration</strong> to increase daily readership by <strong>275%</strong>, grow high-quality active creators by <strong>1177%</strong>, and deliver campaigns with <strong>millions of impressions</strong>.",
+      meituanPoint1: "Built photography category operations from 0 to 1 and grew daily reads 275%.",
+      meituanPoint2: "Activated 100+ creators and lifted high-quality active creators from 45 to 575.",
+      meituanPoint3: "Led S-level offline campaigns including Lu Xun's Circle of Friends and Public Museum Rankings.",
+      xhsCompany: "Xiaohongshu",
       xhsTitle: "Content & User Operations Intern",
       xhs:
-        "I supported recap campaigns, Vlog template activations, creator education, and community coordination while learning platform rhythm and distribution logic.",
+        "Supported large-scale campaigns, creator education, template activations, and community playbooks.",
+      xhsBack:
+        "Supported content and user operations across <strong>Vlog and Travel verticals</strong>, covering official campaign execution, creator recruitment, community management and city influencer events; drove <strong>5M+ campaign participants</strong>, gained <strong>640K followers in three months</strong>, and generated <strong>5,000+ high-quality posts</strong> through content planning and user operations.",
+      xhsPoint1: "Supported My Annual Summary 2021, Vlog My Month, and 2021 Vlogmas campaigns.",
+      xhsPoint2: "Coordinated 100+ creators for music diary templates and generated 6.7M+ views.",
+      xhsPoint3: "Built creator education playbooks and increased community posting users 340%.",
       ogilvyCompany: "Ogilvy",
       ogilvyTitle: "Strategy Consulting Intern",
       ogilvy:
-        "I helped shape communication strategy through customer journey mapping and keyword research, strengthening structured thinking and cross-team expression.",
+        "Built strategy foundations through customer journey mapping, keyword research, and social campaign planning.",
+      ogilvyBack:
+        "Supported PR strategy for a technology client by mapping customer journeys, conducting <strong>Baidu SEO keyword research</strong>, and developing social media campaign plans; helped execute Weibo and Bilibili campaigns that increased engagement by <strong>50% within three weeks</strong>.",
+      ogilvyPoint1: "Designed social media campaign strategy for a technology client.",
+      ogilvyPoint2: "Mapped customer journeys and supported Baidu SEO keyword research.",
+      ogilvyPoint3: "Supported campaign execution that increased social engagement by 50% in three weeks.",
     },
     cases: {
       eyebrow: "Cases",
@@ -87,20 +102,41 @@ window.PORTFOLIO_CONTENT = {
       eyebrow: "AI Toolkit",
       title: "AI is my second brain for content, community, and operational decision-making.",
       card1: {
-        title: "Content generation",
-        body: "Use ChatGPT to generate welcome texts, reminders, event invites, and reusable community content libraries.",
+        title: "Industry research",
+        body: "Turn scattered platform cases into structured insights, user motivations, and campaign opportunities.",
       },
       card2: {
-        title: "Audience segmentation",
-        body: "Use semantic analysis and tag systems to identify interests such as photography, travel, and food for tiered operations.",
+        title: "Creator growth design",
+        body: "Translate creator needs into training plans, community actions, and measurable weekly goals.",
       },
       card3: {
-        title: "Topic mining",
-        body: "Extract viral keywords and comment patterns to build topic banks, distribution copy, and user-need maps.",
+        title: "Campaign workflow",
+        body: "Use AI to turn ideas into executable timelines, task packs, launch rhythm, and review checkpoints.",
       },
       promptLabel: "Example prompt",
       promptBody:
         "You are a senior travel marketing strategist. Analyze one year of viral Xiaohongshu and Douyin city tourism / citywalk cases, summarize why they worked, explain user motivation, design interactive ideas for the Shaoxing Lu Xun IP, and propose an integrated online + offline campaign.",
+      prompt1: {
+        title: "Example Prompt 1: Cultural Tourism Marketing Research",
+        label: "Example Prompt",
+        body:
+          "You are a senior cultural tourism marketing strategist. Please analyze the Top 5 viral Xiaohongshu and Douyin city tourism / citywalk cases from the past year, and output the following in a report and table format:\n\nCity / destination\nReason it went viral\nUser participation motivation\nInteractive ideas suitable for Shaoxing's Lu Xun IP\nOnline + offline activation plan",
+      },
+      prompt2: {
+        title: "Example Prompt 2: Lu Xun Offline Activation Timeline",
+        label: "Example Prompt",
+        flow:
+          "<span>Benchmark collection</span><span>↓</span><span>ChatGPT analyzes viral patterns</span><span>↓</span><span>Idea pool</span><span>↓</span><span>Screening</span><span>↓</span><span>Activation mechanism</span><span>↓</span><span>Creator task pack</span><span>↓</span><span>Community launch</span>",
+        body:
+          "Please combine the workflow below and draw a complete execution plan for the Lu Xun Circle of Friends campaign.\n\nWorkflow: benchmark collection → ChatGPT analyzes viral patterns → idea pool → screening → activation mechanism → creator task pack → community launch.",
+        caption: "Prompt output: Lu Xun offline check-in campaign workflow.",
+      },
+      prompt3: {
+        title: "Example Prompt 3: Photography KOL/KOC 10k Follower Sprint Camp",
+        label: "Example Prompt",
+        body:
+          "You are a photography content growth operator. Please design a 30-day growth bootcamp for photography creators.\n\nUsers: photography beginners, hobbyists with some shooting foundation, but little account-operations experience.\nGoal: improve posting volume, interaction rate, and saves.\nOutput: Day 1 to Day 30 learning plan for photography rookies, weekly operations actions, community live sessions, topic activities, strong case analysis, off-platform industry insights, and weekly operation goals.",
+      },
       examples: {
         one: {
           title: "Photography KOL/KOC 10k Follower Sprint Camp",
@@ -120,11 +156,18 @@ window.PORTFOLIO_CONTENT = {
     },
     blogs: {
       eyebrow: "Blogs",
-      title: "Three high-performing Xiaohongshu posts that prove content judgment and platform fluency.",
+      title: "I’m also a <em>content creator</em>.",
       openLink: "Open post link",
-      note1: "My internship story",
-      note2: "Study-abroad packing guide",
-      note3: "Klook collaboration",
+      creatorLine:
+        'on Red <a href="https://www.xiaohongshu.com/user/profile/588f4f4050c4b422cb025aa3?xsec_token=AB3XrHzbLw-b7WIudsijINPH3BZUt9itCAVIcl1TRduAk=&xsec_source=pc_note" target="_blank" rel="noreferrer">@卖蛋卷的老阿姨</a>',
+      creatorTopics: "Good Jobs and Future career, Study-Abroad experience, Traveling Guidance, Products promotion",
+      followersValue: "2171",
+      likesValue: "58k",
+      followers: "Follows",
+      likes: "Likes and Saves",
+      note1: "Big Tech Job Search Guide",
+      note2: "Study-Abroad Essentials Collaboration",
+      note3: "KLOOK Platform Collaboration",
     },
     life: {
       eyebrow: "Lifestyle",
@@ -143,7 +186,7 @@ window.PORTFOLIO_CONTENT = {
         body: "I like sports that demand rhythm, focus, and reflection.",
       },
       card3: {
-        title: "Vitality",
+        title: "Energy",
         body: "Boxing helps me turn pressure into action, and it mirrors the pace of high-intensity project delivery.",
       },
       card4: {
@@ -151,14 +194,15 @@ window.PORTFOLIO_CONTENT = {
         body: "I like switching perspectives between islands, grasslands, and cities to keep my aesthetic sense and inspiration moving.",
       },
       card5: {
-        title: "Perspective",
+        title: "Exploratory",
         body: "Travel and horse riding keep me curious about the world and make me more eager to document real experiences.",
       },
     },
     contact: {
       eyebrow: "Contact",
-      title: "If you’re hiring for AI growth, content operations, or community-led products, let’s talk.",
+      title: "Get in <em>touch.</em>",
       body: "You can use this portfolio as my bilingual intro page, project deck, and personal brand site.",
+      statement: "If you’re hiring for AI growth, content operations, or community-led products, let’s talk.",
       emailLabel: "Email",
       xhsLabel: "Xiaohongshu",
       linkedinLabel: "LinkedIn",
@@ -222,15 +266,30 @@ window.PORTFOLIO_CONTENT = {
       meituanCompany: "美团 / 大众点评",
       meituanTitle: "垂直品类产品运营",
       meituan:
-        "从 0-1 搭建内容策略、创作者拉新、活动运营和社区机制，推动类目消费和高质量作者增长。",
+        "从 0-1 推动摄影垂类增长、创作者运营和 S 级城市文化项目。",
+      meituanBack:
+        "负责<strong>摄影/文博垂类 0-1 内容生态搭建</strong>，主导创作者招募、社群促活及 S 级营销项目落地；通过<strong>数据分析与跨方合作</strong>，推动类目日均阅读增长 <strong>275%</strong>、优质月活作者增长 <strong>1177%</strong>，打造<strong>千万级曝光</strong>活动案例。",
+      meituanPoint1: "搭建摄影垂类从 0-1 的内容运营策略，推动类目日均阅读增长 275%。",
+      meituanPoint2: "通过 1v1 建联与社群精细化运营拉新 100+ 摄影作者，高质量月活作者从 45 增至 575。",
+      meituanPoint3: "策划执行鲁迅朋友圈、大众文博榜等 S 级线上线下活动，形成内容与城市影响力增长。",
       xhsCompany: "小红书",
       xhsTitle: "内容与用户运营实习生",
       xhs:
-        "参与年度盘点、Vlog 模板活动、创作者教育和社群协同，熟悉平台节奏和内容传播逻辑。",
+        "参与大型站内活动、创作者教育、模板玩法和社群运营方法建设。",
+      xhsBack:
+        "参与 <strong>Vlog 及旅游垂类内容运营</strong>，负责官方活动执行、创作者招募、社群维护及城市达人活动；通过内容策划与用户运营，推动活动参与用户 <strong>500 万+</strong>、账号 3 个月涨粉 <strong>64 万+</strong>，累计产出优质内容 <strong>5000+ 篇</strong>。",
+      xhsPoint1: "参与我的年度盘点 2021、Vlog My Month、2021 Vlogmas 等站内活动。",
+      xhsPoint2: "联动 100+ 头部 Vlog 博主打造音乐日记模板，带来 670w+ 播放。",
+      xhsPoint3: "通过爆款笔记创作 playbook 提升社群发稿人数 340%，孵化 150+ 核心作者。",
       ogilvyCompany: "奥美",
       ogilvyTitle: "策略咨询实习生",
       ogilvy:
-        "结合用户旅程与关键词研究协助制定传播策略，强化了结构化思考和跨团队表达能力。",
+        "通过用户旅程、关键词研究和社媒传播方案训练策略思维。",
+      ogilvyBack:
+        "参与科技企业公关传播项目，负责用户旅程梳理、<strong>百度 SEO 关键词研究</strong>及社媒传播方案设计；协助落地微博、B站等大型活动，<strong>3 周内推动社媒互动率提升 50%</strong>。",
+      ogilvyPoint1: "为科技客户协助设计社交媒体传播策略。",
+      ogilvyPoint2: "参与用户旅程梳理，并基于百度 SEO 服务进行关键词研究。",
+      ogilvyPoint3: "协助落地传播方案，推动社交媒体互动在 3 周内提升 50%。",
     },
     cases: {
       eyebrow: "亮点项目",
@@ -266,20 +325,41 @@ window.PORTFOLIO_CONTENT = {
       eyebrow: "AI 工具箱",
       title: "我把 AI 当作日常运营的第二大脑。",
       card1: {
-        title: "内容生成",
-        body: "基于 ChatGPT 生成社群欢迎语、活动邀约、提醒话术和标准内容库，提升内容产出效率 80%+。",
+        title: "行业调研",
+        body: "把分散的平台案例整理成结构化洞察、用户动机和活动机会。",
       },
       card2: {
-        title: "用户分层",
-        body: "结合语义分析和标签体系识别摄影、旅行、美食等兴趣标签，支持社群分层运营。",
+        title: "创作者增长设计",
+        body: "把创作者需求转化成训练营计划、社群动作和可追踪周目标。",
       },
       card3: {
-        title: "选题挖掘",
-        body: "提取爆款内容关键词和评论高频词，建立选题库、传播文案和用户关注点画像。",
+        title: "活动工作流",
+        body: "用 AI 把创意拆成可执行时间线、任务包、宣发节奏和复盘节点。",
       },
       promptLabel: "示例 prompt",
       promptBody:
         "你是一位资深文旅营销策划专家，请分析近一年小红书和抖音爆火的城市文旅、citywalk 案例，并提炼爆火原因、用户参与动机、适合绍兴鲁迅 IP 的互动玩法，以及线上+线下联动方案。",
+      prompt1: {
+        title: "示例 Prompt 1 文旅营销行业调研",
+        label: "示例 Prompt",
+        body:
+          "你是一位资深文旅营销策划专家，请分析近一年小红书和抖音爆火的 Top5 城市文旅、citywalk 案例，并提炼以下内容，以报告和表格的形式输出：\n\n城市 / 景点\n爆火原因\n用户参与动机\n适合绍兴鲁迅 IP 的互动玩法\n线上 + 线下联动方案",
+      },
+      prompt2: {
+        title: "示例 Prompt 2 鲁迅朋友圈线下活动执行时间线",
+        label: "示例 PROMPT",
+        flow:
+          "<span>竞品案例收集</span><span>↓</span><span>ChatGPT 分析爆款规律</span><span>↓</span><span>生成活动创意池</span><span>↓</span><span>筛选方案</span><span>↓</span><span>产出活动机制</span><span>↓</span><span>创作者任务包</span><span>↓</span><span>社群宣发</span>",
+        body:
+          "同时，请结合如下工作流，画出一个完整的鲁迅朋友圈执行方案。\n\n执行周期：4-6 周内\n工作流：竞品案例收集 → ChatGPT 分析爆款规律 → 生成活动创意池 → 筛选方案 → 产出活动机制 → 创作者任务包 → 社群宣发",
+        caption: "示例 PROMPT：鲁迅朋友圈线下打卡活动完整流程图。",
+      },
+      prompt3: {
+        title: "示例 Prompt 3 摄影 KOL/KOC 万粉冲刺训练营",
+        label: "示例 Prompt",
+        body:
+          "你是一位摄影内容运营专家。请针对摄影创作者设计 30 天成长训练营。\n\n要求：\n用户：摄影新人小白、有一定摄影基础的摄影爱好者，但缺乏账号运营经验。\n目标：提升摄影发文量、互动率和笔记赞藏数据。\n输出：摄影萌新 Day1-Day30 学习计划，每一周运营动作，包含社群直播课、内容话题活动主题、优质案例分析、站外行业洞察、周度运营目标。",
+      },
       examples: {
         one: {
           title: "摄影 KOL / KOC 万粉冲刺训练营",
@@ -299,11 +379,18 @@ window.PORTFOLIO_CONTENT = {
     },
     blogs: {
       eyebrow: "博客 / 笔记",
-      title: "三个高赞笔记，最能证明我的内容判断和平台理解。",
+      title: "我也是一个<em>创作者</em>",
       openLink: "打开笔记链接",
-      note1: "我的实习故事",
-      note2: "留学打包攻略",
-      note3: "Klook 合作笔记",
+      creatorLine:
+        '在小红书 <a href="https://www.xiaohongshu.com/user/profile/588f4f4050c4b422cb025aa3?xsec_token=AB3XrHzbLw-b7WIudsijINPH3BZUt9itCAVIcl1TRduAk=&xsec_source=pc_note" target="_blank" rel="noreferrer">@卖蛋卷的老阿姨</a>',
+      creatorTopics: "大厂求职、留学生活、旅行攻略、好物种草",
+      followersValue: "2171",
+      likesValue: "5.8万",
+      followers: "粉丝",
+      likes: "获赞与收藏",
+      note1: "大厂求职攻略",
+      note2: "留学好物合作",
+      note3: "KLOOK平台合作",
     },
     life: {
       eyebrow: "兴趣爱好",
@@ -336,8 +423,9 @@ window.PORTFOLIO_CONTENT = {
     },
     contact: {
       eyebrow: "联系我",
-      title: "如果你在找一位懂 AI 增长、内容运营和社区打法的人，欢迎联系我。",
+      title: "Get in <em>touch.</em>",
       body: "你可以把这份作品集当成我的双语介绍页、项目集和个人品牌主页。",
+      statement: "如果你在寻找一位懂 AI 增长、内容运营和社区打法的人，欢迎联系我。",
       emailLabel: "邮箱",
       xhsLabel: "小红书",
       linkedinLabel: "领英",

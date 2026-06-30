@@ -69,3 +69,71 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".section").forEach((section) => observer.observe(section));
+
+function enableHorizontalGallery(gallery) {
+  let isDragging = false;
+  let startX = 0;
+  let startScrollLeft = 0;
+
+  gallery.addEventListener(
+    "wheel",
+    (event) => {
+      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+      event.preventDefault();
+      gallery.scrollLeft += event.deltaY;
+    },
+    { passive: false }
+  );
+
+  gallery.addEventListener("pointerdown", (event) => {
+    isDragging = true;
+    startX = event.clientX;
+    startScrollLeft = gallery.scrollLeft;
+    gallery.classList.add("is-dragging");
+    gallery.setPointerCapture(event.pointerId);
+  });
+
+  gallery.addEventListener("pointermove", (event) => {
+    if (!isDragging) return;
+    gallery.scrollLeft = startScrollLeft - (event.clientX - startX);
+  });
+
+  function endDrag(event) {
+    if (!isDragging) return;
+    isDragging = false;
+    gallery.classList.remove("is-dragging");
+    if (event.pointerId && gallery.hasPointerCapture(event.pointerId)) {
+      gallery.releasePointerCapture(event.pointerId);
+    }
+  }
+
+  gallery.addEventListener("pointerup", endDrag);
+  gallery.addEventListener("pointercancel", endDrag);
+  gallery.addEventListener("pointerleave", endDrag);
+}
+
+function updateLifestyleDepth() {
+  const gallery = document.querySelector(".lifestyle-gallery");
+  if (!gallery) return;
+  const galleryBox = gallery.getBoundingClientRect();
+  const galleryCenter = galleryBox.left + galleryBox.width / 2;
+
+  gallery.querySelectorAll(".life-card").forEach((card) => {
+    const cardBox = card.getBoundingClientRect();
+    const cardCenter = cardBox.left + cardBox.width / 2;
+    const distance = (cardCenter - galleryCenter) / galleryBox.width;
+    const absDistance = Math.min(Math.abs(distance), 0.75);
+    card.style.setProperty("--tilt", `${(-distance * 26).toFixed(2)}deg`);
+    card.style.setProperty("--lift", `${(absDistance * 34).toFixed(2)}px`);
+    card.style.setProperty("--scale", `${(1.05 - absDistance * 0.18).toFixed(3)}`);
+  });
+}
+
+document.querySelectorAll(".blog-gallery, .lifestyle-gallery").forEach(enableHorizontalGallery);
+
+const lifestyleGallery = document.querySelector(".lifestyle-gallery");
+if (lifestyleGallery) {
+  lifestyleGallery.addEventListener("scroll", () => window.requestAnimationFrame(updateLifestyleDepth));
+  window.addEventListener("resize", updateLifestyleDepth);
+  updateLifestyleDepth();
+}
