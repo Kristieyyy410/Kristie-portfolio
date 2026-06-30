@@ -129,7 +129,36 @@ function updateLifestyleDepth() {
   });
 }
 
+function updateBlogDepth() {
+  const gallery = document.querySelector(".blog-gallery");
+  if (!gallery) return;
+  const galleryBox = gallery.getBoundingClientRect();
+  const galleryCenter = galleryBox.left + galleryBox.width / 2;
+
+  gallery.querySelectorAll(".blog-card").forEach((card) => {
+    const cardBox = card.getBoundingClientRect();
+    const cardCenter = cardBox.left + cardBox.width / 2;
+    const distance = (cardCenter - galleryCenter) / galleryBox.width;
+    const absDistance = Math.min(Math.abs(distance), 0.7);
+    card.style.setProperty("--blog-tilt", `${(-distance * 18).toFixed(2)}deg`);
+    card.style.setProperty("--blog-lift", `${(absDistance * 26).toFixed(2)}px`);
+    card.style.setProperty("--blog-scale", `${(1.02 - absDistance * 0.18).toFixed(3)}`);
+    card.style.setProperty("--blog-opacity", `${(1 - absDistance * 0.32).toFixed(3)}`);
+  });
+}
+
 document.querySelectorAll(".blog-gallery, .lifestyle-gallery").forEach(enableHorizontalGallery);
+
+const blogGallery = document.querySelector(".blog-gallery");
+if (blogGallery) {
+  blogGallery.addEventListener("scroll", () => window.requestAnimationFrame(updateBlogDepth));
+  window.addEventListener("resize", updateBlogDepth);
+  blogGallery.querySelectorAll("video").forEach((video) => {
+    video.addEventListener("mouseenter", () => video.play());
+    video.addEventListener("mouseleave", () => video.pause());
+  });
+  updateBlogDepth();
+}
 
 const lifestyleGallery = document.querySelector(".lifestyle-gallery");
 if (lifestyleGallery) {
