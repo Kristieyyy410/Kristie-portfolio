@@ -172,6 +172,9 @@ window.PORTFOLIO_CONTENT = {
       note5: "Doodle-style minivlog",
       note6: "Evaluation of British Dairy Products",
       note7: "Xishuangbanna Hiking Guide",
+      likesStat: "Likes",
+      savesStat: "Saves",
+      sharesStat: "Shares",
     },
     life: {
       eyebrow: "Lifestyle",
@@ -399,6 +402,9 @@ window.PORTFOLIO_CONTENT = {
       note5: "涂鸦手绘MiniVlog",
       note6: "英国奶制品测评",
       note7: "西双版纳徒步攻略",
+      likesStat: "点赞",
+      savesStat: "收藏",
+      sharesStat: "转发",
     },
     life: {
       eyebrow: "兴趣爱好",
