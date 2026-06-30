@@ -2,16 +2,16 @@ window.PORTFOLIO_CONTENT = {
   en: {
     hero: {
       eyebrow: "AI Growth / Bilingual Portfolio",
-      title: "Turning content, community, and AI into growth that people want to join.",
+      title: "Turning content, community, and AI into growth that people want to join",
       lead:
-        "I connect content growth, creator operations, community activation, and campaign planning into one measurable growth loop, with bilingual storytelling and AI tools to speed up delivery and improve decision-making.",
+        "I connect content growth, creator operations, community activation, and campaign planning into one measurable growth loop, with bilingual storytelling and AI tools to speed up delivery and improve decision-making",
       ctaPrimary: "View Cases",
       ctaSecondary: "Contact Me",
       metric1: "content DAU growth",
       metric2: "active creator growth",
       metric3: "offline attendees",
       noteLabel: "Current focus",
-      noteBody: "AI growth, content operations, creator supply, and community activation.",
+      noteBody: "AI growth, content operations, creator supply, and community activation",
     },
     stats: {
       eyebrow: "What I bring",
@@ -225,16 +225,16 @@ window.PORTFOLIO_CONTENT = {
   zh: {
     hero: {
       eyebrow: "AI 产品增长运营 / 双语作品集",
-      title: "用内容、社区和 AI，把复杂产品讲成用户愿意加入的一次体验。",
+      title: "用内容、社区和 AI，把复杂产品讲成用户愿意加入的一次体验",
       lead:
-        "我擅长把内容增长、创作者运营、社群冷启动和活动策划串成一条完整增长链路，用双语表达和 AI 工具提升传播效率、用户转化与运营复盘质量。",
+        "我擅长把内容增长、创作者运营、社群冷启动和活动策划串成一条完整增长链路，用双语表达和 AI 工具提升传播效率、用户转化与运营复盘质量",
       ctaPrimary: "查看案例",
       ctaSecondary: "联系我",
       metric1: "内容日均增长",
       metric2: "高质量作者增长",
       metric3: "线下参与人数",
       noteLabel: "当前关注",
-      noteBody: "AI 增长、内容运营、创作者供给与社区激活。",
+      noteBody: "AI 增长、内容运营、创作者供给与社区激活",
     },
     stats: {
       eyebrow: "我的能力",
