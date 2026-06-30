@@ -86,6 +86,7 @@ function enableHorizontalGallery(gallery) {
   );
 
   gallery.addEventListener("pointerdown", (event) => {
+    if (event.target.closest("a")) return;
     isDragging = true;
     startX = event.clientX;
     startScrollLeft = gallery.scrollLeft;
