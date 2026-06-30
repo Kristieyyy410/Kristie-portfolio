@@ -168,6 +168,10 @@ window.PORTFOLIO_CONTENT = {
       note1: "Big Tech Job Search Guide",
       note2: "Study-Abroad Essentials Collaboration",
       note3: "KLOOK Platform Collaboration",
+      note4: "English vlog challenge",
+      note5: "Doodle-style minivlog",
+      note6: "Evaluation of British Dairy Products",
+      note7: "Xishuangbanna Hiking Guide",
     },
     life: {
       eyebrow: "Lifestyle",
@@ -391,6 +395,10 @@ window.PORTFOLIO_CONTENT = {
       note1: "大厂求职攻略",
       note2: "留学好物合作",
       note3: "KLOOK平台合作",
+      note4: "全英Vlog挑战",
+      note5: "涂鸦手绘MiniVlog",
+      note6: "英国奶制品测评",
+      note7: "西双版纳徒步攻略",
     },
     life: {
       eyebrow: "兴趣爱好",
