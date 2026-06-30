@@ -155,7 +155,11 @@ if (blogGallery) {
   window.addEventListener("resize", updateBlogDepth);
   blogGallery.querySelectorAll("video").forEach((video) => {
     video.addEventListener("mouseenter", () => video.play());
-    video.addEventListener("mouseleave", () => video.pause());
+    video.addEventListener("mouseleave", () => {
+      video.pause();
+      video.currentTime = 0;
+      video.load();
+    });
   });
   updateBlogDepth();
 }
