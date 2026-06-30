@@ -214,9 +214,9 @@ a {
 }
 
 .hero h1 {
-  max-width: 10ch;
-  font-size: clamp(4.35rem, 8.4vw, 5.45rem);
-  line-height: 0.92;
+  max-width: 13.8ch;
+  font-size: clamp(3.65rem, 6.8vw, 4.85rem);
+  line-height: 0.96;
 }
 
 .section h2 {
@@ -1067,6 +1067,7 @@ a {
 
 .blog-body {
   padding: 14px 0 0;
+  text-align: center;
 }
 
 .blog-platform {
@@ -1085,6 +1086,9 @@ a {
 }
 
 .blog-card h3 a {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
   color: #9b5f2d;
   transition: color 160ms ease;
 }
@@ -1094,10 +1098,31 @@ a {
 }
 
 .stat-strip {
-  display: none;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+.stat-strip span {
+  display: grid;
+  gap: 2px;
+  justify-items: center;
+  font-size: 0.68rem;
+  line-height: 1.1;
+}
+
+.stat-strip strong {
+  color: var(--text);
+  font-size: 0.94rem;
+}
+
+.stat-strip small {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .life-tag {
