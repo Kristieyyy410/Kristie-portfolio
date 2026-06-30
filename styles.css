@@ -215,8 +215,8 @@ a {
 
 .hero h1 {
   max-width: 10ch;
-  font-size: 6rem;
-  line-height: 0.88;
+  font-size: clamp(4.35rem, 8.4vw, 5.45rem);
+  line-height: 0.92;
 }
 
 .section h2 {
@@ -229,6 +229,7 @@ a {
   font-family: "Noto Serif SC", "Noto Sans SC", serif;
   font-weight: 600;
   max-width: 12.5em;
+  font-size: clamp(3.1rem, 5.8vw, 4.35rem);
   line-height: 1.05;
 }
 
@@ -242,8 +243,8 @@ a {
   max-width: 50ch;
   margin: 20px 0 0;
   color: var(--muted);
-  font-size: 1.02rem;
-  line-height: 1.9;
+  font-size: 0.96rem;
+  line-height: 1.82;
 }
 
 .hero-actions {
@@ -968,34 +969,34 @@ a {
 
 .creator-header h2 {
   max-width: 100%;
-  font-size: clamp(4rem, 8vw, 7.6rem);
-  line-height: 0.86;
-  letter-spacing: -0.055em;
+  font-size: clamp(3.1rem, 6.2vw, 5.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
 }
 
 .creator-header h2 em {
-  color: #6b36c9;
+  color: var(--accent);
   font-style: italic;
 }
 
 .creator-line {
-  margin: 28px 0 0;
+  margin: 20px 0 0;
   color: var(--muted);
-  font-size: clamp(1.4rem, 2.8vw, 2.25rem);
-  line-height: 1.25;
+  font-size: clamp(1.05rem, 2vw, 1.55rem);
+  line-height: 1.35;
 }
 
 .creator-line a {
-  color: #6b36c9;
+  color: var(--accent);
   font-weight: 800;
 }
 
 .creator-topics {
   max-width: 760px;
-  margin: 22px 0 0;
+  margin: 16px 0 0;
   color: var(--muted);
-  font-size: 1.12rem;
-  line-height: 1.7;
+  font-size: 0.98rem;
+  line-height: 1.65;
 }
 
 .creator-stats {
@@ -1030,42 +1031,49 @@ a {
 .blog-gallery {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(280px, 31%);
+  grid-auto-columns: minmax(230px, 26%);
   gap: 20px;
   overflow-x: auto;
-  padding: 6px 2px 20px;
+  padding: 18px 6vw 28px;
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
   cursor: grab;
+  perspective: 1200px;
 }
 
 .blog-card {
   overflow: hidden;
   border: 0;
-  border-radius: 18px;
+  border-radius: 22px;
   background: transparent;
   box-shadow: none;
   scroll-snap-align: start;
+  transform: translateY(var(--blog-lift, 18px)) rotateY(var(--blog-tilt, 0deg)) scale(var(--blog-scale, 0.92));
+  transform-origin: center;
+  transition: transform 220ms ease, opacity 220ms ease;
+  opacity: var(--blog-opacity, 0.72);
 }
 
-.blog-card img {
+.blog-card img,
+.blog-card video {
   width: 100%;
   aspect-ratio: 4 / 5.35;
   object-fit: cover;
   object-position: center center;
-  border-radius: 18px;
+  display: block;
+  border-radius: 22px;
   box-shadow: 0 18px 48px rgba(33, 23, 13, 0.12);
 }
 
 .blog-body {
-  padding: 18px 0 0;
+  padding: 14px 0 0;
 }
 
 .blog-platform {
   display: inline-flex;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: var(--accent-2);
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1073,9 +1081,15 @@ a {
 
 .blog-body a {
   display: inline-flex;
-  margin-top: 8px;
+  margin-top: 6px;
   color: var(--accent-2);
+  font-size: 0.84rem;
   font-weight: 700;
+}
+
+.blog-card h3 {
+  font-size: clamp(1.18rem, 1.8vw, 1.55rem);
+  line-height: 1.15;
 }
 
 .stat-strip {
@@ -1110,9 +1124,9 @@ a {
 }
 
 .workflow-card:nth-child(3) {
-  gap: 18px;
-  border-color: rgba(21, 20, 18, 0.3);
-  background: rgba(251, 250, 246, 0.92);
+  gap: 14px;
+  border-color: var(--line);
+  background: rgba(251, 250, 246, 0.84);
 }
 
 .prompt-box {
@@ -1132,10 +1146,9 @@ a {
 .workflow-card:nth-child(3) .prompt-inline,
 .workflow-card:nth-child(3) .compact-flow,
 .workflow-card:nth-child(3) .prompt-output {
-  border-radius: 0;
-  border-color: rgba(21, 20, 18, 0.34);
-  background: rgba(255, 255, 255, 0.58);
-  box-shadow: none;
+  border-radius: var(--radius-md);
+  border-color: var(--line);
+  background: rgba(244, 241, 234, 0.52);
 }
 
 .prompt-header {
